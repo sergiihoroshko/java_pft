@@ -7,21 +7,13 @@ public class MyFirstProgram {
         hello("Serhii");
 
         Square square = new Square(8.5);
-        System.out.println("Square area with side " + square.l + " = " + ares(square));
+        System.out.println("Square area with side " + square.l + " = " + square.area());
 
         Rectangle rectangle = new Rectangle(4, 6);
-        System.out.println("rectangle area with sides " + rectangle.a + rectangle.b + " = " + area(rectangle));
+        System.out.println("rectangle area with sides " + rectangle.a + rectangle.b + " = " + rectangle.area());
     }
 
     public static void hello(String x) {
         System.out.println("Hello, " + x + "!");
-    }
-
-    public static double ares(Square square) {
-        return square.l * square.l;
-    }
-
-    public static double area(Rectangle rectangle) {
-        return rectangle.a * rectangle.b;
     }
 }
