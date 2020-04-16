@@ -6,23 +6,22 @@ public class MyFirstProgram {
         hello("user");
         hello("Serhii");
 
-        double len = 8.0;
-        System.out.println("Square area with side " + len + " = " + ares(len));
+        Square square = new Square(8.5);
+        System.out.println("Square area with side " + square.l + " = " + ares(square));
 
-        double a = 4;
-        double b = 6;
-        System.out.println("rectangle area with sides" + a + b + " = " + area(a, b));
+        Rectangle rectangle = new Rectangle(4, 6);
+        System.out.println("rectangle area with sides " + rectangle.a + rectangle.b + " = " + area(rectangle));
     }
 
     public static void hello(String x) {
         System.out.println("Hello, " + x + "!");
     }
 
-    public static double ares(double l) {
-        return l * l;
+    public static double ares(Square square) {
+        return square.l * square.l;
     }
 
-    public static double area(double a, double b) {
-        return a * b;
+    public static double area(Rectangle rectangle) {
+        return rectangle.a * rectangle.b;
     }
 }
