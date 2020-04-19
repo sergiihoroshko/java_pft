@@ -1,3 +1,18 @@
 apply plugin: 'java'
 apply plugin: 'application'
 mainClassName = "MyFirstProgram"
+
+repositories {
+    // https://docs.gradle.org/2.4/userguide/dependency_management.html#sub:maven_repo
+    mavenCentral()
+}
+
+dependencies {
+    // https://search.maven.org/artifact/org.testng/testng/7.1.0/jar
+    implementation 'org.testng:testng:7.1.0'
+}
+
+test {
+    // enable TestNG support (default is JUnit)
+    useTestNG()
+}
